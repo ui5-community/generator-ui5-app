@@ -1,4 +1,4 @@
-# generator-ui5-ts-app
+# generator-ui5-app
 
 [![License Status][license-image]][license-url]
 
@@ -8,7 +8,7 @@ Generator which use the official UI5 tooling and support multiple deployment tar
 
 ```bash
 $> npm i -g yo
-$> yo easy-ui5 ts-app
+$> yo easy-ui5 app
 
      _-----_
     |       |    ╭──────────────────────────╮
@@ -29,13 +29,13 @@ Note the different greeting when the generator starts:
 
 ```bash
 $> npm i -g yo
-$> yo ./generator-ui5-ts-app
+$> yo ./generator-ui5-app
 
-     _-----_     ╭──────────────────────────╮
-    |       |    │      Welcome to the      │
-    |--(o)--|    │   generator-ui5-ts-app   │
-   `---------´   │        generator!        │
-    ( _´U`_ )    ╰──────────────────────────╯
+     _-----_     ╭───────────────────────╮
+    |       |    │     Welcome to the    │
+    |--(o)--|    │   generator-ui5-app   │
+   `---------´   │       generator!      │
+    ( _´U`_ )    ╰───────────────────────╯
     /___A___\   /
      |  ~  |
    __'.___.'__
