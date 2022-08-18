@@ -34,8 +34,8 @@ module.exports = class extends Generator {
     };
 
     const fwkDependencies = {
-      OpenUI5: "@openui5/sap.ui.core",
-      SAPUI5: "@sapui5/distribution-metadata"
+      OpenUI5: "@openui5/ts-types-esm",
+      SAPUI5: "@sapui5/ts-types-esm"
     };
 
     const prompts = [
