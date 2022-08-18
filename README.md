@@ -54,5 +54,5 @@ We welcome any type of contribution (code contributions, pull requests, issues) 
 
 This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the LICENSE file.
 
-[license-image]: https://img.shields.io/github/license/ui5-community/generator-ui5-ts-app.svg
-[license-url]: https://github.com/ui5-community/generator-ui5-ts-app/blob/main/LICENSE
+[license-image]: https://img.shields.io/github/license/ui5-community/generator-ui5-app.svg
+[license-url]: https://github.com/ui5-community/generator-ui5-app/blob/main/LICENSE
