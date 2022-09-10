@@ -122,7 +122,7 @@ module.exports = class extends Generator {
 
       // use the namespace and the application name as new directory
       if (props.newdir) {
-        this.destinationRoot(`${props.namespace}.${props.application}`);
+        this.destinationRoot(this.destinationPath(`${props.namespace}.${props.application}`));
       }
       delete props.newdir;
 
