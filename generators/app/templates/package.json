@@ -12,8 +12,9 @@
     "lint": "eslint webapp"
   },
   "devDependencies": {
-    "@ui5/cli": "^2.14.10",
-    "eslint": "^8.22.0",
+    "<%= tstypes %>": "<%= tstypesVersion %>",
+    "@ui5/cli": "^2.14.14",
+    "eslint": "^8.27.0",
     "ui5-middleware-livereload": "^0.7.0"
   },
   "ui5": {

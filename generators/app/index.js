@@ -1,22 +1,28 @@
 "use strict";
 const Generator = require("yeoman-generator");
 
-const chalk = require("chalk");
 const yosay = require("yosay");
 const path = require("path");
-const glob = require("glob");
 const semver = require("semver");
-const packageJson = require('package-json');
+
+// ES modules imports (see initializing hook)
+let chalk, glob, packageJson;
 
 module.exports = class extends Generator {
 
-  static displayName = "Create a new UI5 TypeScript application";
+  static displayName = "Create a new UI5 application";
 
   constructor(args, opts) {
     super(args, opts, {
       // disable the Yeoman 5 package-manager logic (auto install)!
       customInstallTask: "disabled"
     });
+  }
+
+  async initializing() {
+    chalk = (await import("chalk")).default;
+    glob = (await import("glob")).default;
+    packageJson = (await import("package-json")).default;
   }
 
   prompting() {
@@ -128,6 +134,10 @@ module.exports = class extends Generator {
 
       // apply the properties
       this.config.set(props);
+
+      // determine the ts-types and version
+      this.config.set("tstypes", `@${props.framework.toLowerCase()}/ts-types-esm`);
+      this.config.set("tstypesVersion", props.frameworkVersion);
 
       // appId + appURI
       this.config.set("appId", `${props.namespace}.${props.application}`);
