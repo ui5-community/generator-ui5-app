@@ -4,8 +4,9 @@
     "noEmit": true,
     "checkJs": true,
     "allowJs": true,
-    "types": [
-        "<%= tstypes %>"
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/<%= tstypes %>"
     ]
   }
 }
