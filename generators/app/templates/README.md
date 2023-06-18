@@ -1,8 +1,10 @@
-# <%= application %>
+# UI5 Application <%= namespace %>
+
+Insert the purpose of this project and some interesting info here...
 
 ## Description
 
-This app demonstrates a standard setup for developing UI5 applications.
+This app demonstrates a setup for developing UI5 applications.
 
 ## Requirements
 
@@ -13,7 +15,7 @@ Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for depende
 Use `npm` (or `yarn`) to install the dependencies:
 
 ```sh
-npm i
+npm install
 ```
 
 (To use yarn, just do `yarn` instead.)
@@ -46,7 +48,7 @@ The result is placed into the `dist` folder. To start the generated package, jus
 npm run start:dist
 ```
 
-Note that `index.html` still loads the UI5 framework from the relative URL `resources/...`, which does not physically exist, but is only provided dynamically by the UI5 tooling. So for an actual deployment you should change this URL to either [the CDN](https://openui5.hana.ondemand.com/#/topic/2d3eb2f322ea4a82983c1c62a33ec4ae) or your local deployment of UI5.
+Note that `index.html` still loads the UI5 framework from the relative URL `resources/...`, which does not physically exist, but is only provided dynamically by the UI5 tooling. So for an actual deployment you should change this URL to either [the CDN](https://sdk.openui5.org/#/topic/2d3eb2f322ea4a82983c1c62a33ec4ae) or your local deployment of UI5.
 
 (When using yarn, do `yarn build` and `yarn start:dist` instead.)
 

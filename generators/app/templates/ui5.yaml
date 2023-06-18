@@ -1,4 +1,4 @@
-specVersion: "2.6"
+specVersion: "3.0"
 metadata:
   name: <%= appId %>
 type: application
@@ -9,13 +9,8 @@ framework:
     - name: sap.m
     - name: sap.ui.core
     - name: sap.ui.unified
-    - name: themelib_sap_horizon
+    - name: themelib_<%= defaultTheme %>
 server:
   customMiddleware:
-  - name: ui5-middleware-livereload
-    afterMiddleware: compression
-    configuration:
-      debug: true
-      extraExts: "xml,json,properties"
-      port: 35729
-      path: "webapp"
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
