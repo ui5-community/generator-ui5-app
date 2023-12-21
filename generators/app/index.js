@@ -138,6 +138,10 @@ export default class extends Generator {
 			} else {
 				this.config.set("qunitCoverageFile", `qunit-coverage.js`);
 			}
+
+			// version parameters
+			this.config.set("gte1_98_0", semver.gte(props.frameworkVersion, "1.98.0"));
+			this.config.set("gte1_104_0", semver.gte(props.frameworkVersion, "1.104.0"));
 		});
 	}
 
