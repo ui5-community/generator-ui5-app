@@ -10,7 +10,7 @@
 		"lint:staged": "lint-staged",
 		"format": "prettier --write .",
 		"format:staged": "pretty-quick --staged --verbose",
-		"test": "cd test && yo ../../generator-ui5-ts-app",
+		"test": "cd test && yo ../../generator-ui5-app",
 		"prepare": "node ./.husky/skip.js || husky install",
 		"hooks:pre-commit": "npm-run-all --sequential format:staged lint:staged"
 	},
@@ -25,12 +25,12 @@
 	"license": "Apache-2.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ui5-community/generator-ui5-ts-app.git"
+		"url": "https://github.com/ui5-community/generator-ui5-app.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ui5-community/generator-ui5-ts-app/issues"
+		"url": "https://github.com/ui5-community/generator-ui5-app/issues"
 	},
-	"homepage": "https://github.com/ui5-community/generator-ui5-ts-app#readme",
+	"homepage": "https://github.com/ui5-community/generator-ui5-app#readme",
 	"dependencies": {
 		"chalk": "^5.3.0",
 		"glob": "^10.3.10",
