@@ -23,7 +23,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent", "sap/ui/
 		 * @returns {sap.base.i18n.ResourceBundle} The i18n resource bundle of the component
 		 */
 		getResourceBundle: function () {
-			var oModel = this.getOwnerComponent().getModel("i18n");
+			const oModel = this.getOwnerComponent().getModel("i18n");
 			return oModel.getResourceBundle();
 		},
 
@@ -64,7 +64,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent", "sap/ui/
 		 * If not, it will replace the current entry of the browser history with the main route.
 		 */
 		onNavBack: function () {
-			var sPreviousHash = History.getInstance().getPreviousHash();
+			const sPreviousHash = History.getInstance().getPreviousHash();
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {

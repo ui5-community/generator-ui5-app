@@ -1,3 +1,4 @@
+/* global QUnit */
 sap.ui.define(["<%= appURI %>/controller/Main.controller"], function (MainController) {
 	"use strict";
 

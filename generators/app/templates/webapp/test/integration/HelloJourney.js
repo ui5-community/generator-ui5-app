@@ -1,4 +1,5 @@
-sap.ui.define(["sap/ui/test/opaQunit", "./pages/Main"], function () {
+/* global QUnit */
+sap.ui.define(["sap/ui/test/opaQunit", "./pages/Main"], function (opaTest) {
 	"use strict";
 
 	QUnit.module("Sample Hello Journey");

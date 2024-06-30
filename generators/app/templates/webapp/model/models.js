@@ -3,7 +3,7 @@ sap.ui.define(["sap/ui/model/json/JSONModel", "sap/ui/model/BindingMode", "sap/u
 
 	return {
 		createDeviceModel: function () {
-			var oModel = new JSONModel(Device);
+			const oModel = new JSONModel(Device);
 			oModel.setDefaultBindingMode(BindingMode.OneWay);
 			return oModel;
 		}
