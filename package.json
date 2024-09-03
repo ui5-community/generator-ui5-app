@@ -10,7 +10,7 @@
 		"lint:staged": "lint-staged",
 		"format": "prettier --write .",
 		"format:staged": "pretty-quick --staged --verbose",
-		"test": "cd test && yo ../../generator-ui5-app",
+		"test": "cd test && yo ../generators/app/index.js",
 		"prepare": "node ./.husky/skip.js || husky",
 		"hooks:pre-commit": "npm run format:staged && npm run lint:staged"
 	},
