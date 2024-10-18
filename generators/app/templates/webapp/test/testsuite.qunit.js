@@ -1,9 +1,37 @@
-/* eslint-disable */
-window.suite = function () {
-	var suite = new parent.jsUnitTestSuite();
-	var aParts = location.pathname.match(/(.*\/)(?:[^/]+)/);
-	var sContextPath = aParts && aParts[1];
-	suite.addTestPage(sContextPath + "unit/unitTests.qunit.html");
-	suite.addTestPage(sContextPath + "integration/opaTests.qunit.html");
-	return suite;
-};
+sap.ui.define(function () {
+	"use strict";
+
+	return {
+		name: "QUnit test suite for the UI5 Application: <%= namespace %>",
+		defaults: {
+			page: "ui5://test-resources/<%= appURI %>/Test.qunit.html?testsuite={suite}&test={name}",
+			qunit: {
+				version: 2
+			},
+			sinon: {
+				version: 1
+			},
+			ui5: {
+				language: "EN",
+				theme: "<%= defaultTheme %>"
+			},
+			coverage: {
+				only: "<%= appURI %>/",
+				never: "test-resources/<%= appURI %>/"
+			},
+			loader: {
+				paths: {
+					"<%= appURI %>": "../"
+				}
+			}
+		},
+		tests: {
+			"unit/unitTests": {
+				title: "Unit tests for <%= namespace %>"
+			},
+			"integration/opaTests": {
+				title: "Integration tests for <%= namespace %>"
+			}
+		}
+	};
+});
