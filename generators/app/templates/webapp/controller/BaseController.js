@@ -20,7 +20,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent", "sap/ui/
 
 		/**
 		 * Convenience method for getting the i18n resource bundle of the component.
-		 * @returns {sap.base.i18n.ResourceBundle} The i18n resource bundle of the component
+		 * @returns {Promise<sap.base.i18n.ResourceBundle>} The i18n resource bundle of the component
 		 */
 		getResourceBundle: function () {
 			const oModel = this.getOwnerComponent().getModel("i18n");
