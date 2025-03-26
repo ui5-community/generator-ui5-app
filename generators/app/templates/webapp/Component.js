@@ -3,7 +3,8 @@ sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models"], fu
 
 	return UIComponent.extend("<%= appId %>.Component", {
 		metadata: {
-			manifest: "json"
+			manifest: "json",
+			interfaces: ["sap.ui.core.IAsyncContentCreation"]
 		},
 		init: function () {
 			// call the base component's init function
