@@ -6,7 +6,7 @@ QUnit.config.autostart = false;
 sap.ui.getCore().attachInit(function () {
 	"use strict";
 
-	sap.ui.require(["unit/controller/App.qunit"], function () {
+	sap.ui.require(["unit/controller/Main.qunit"], function () {
 		QUnit.start();
 	});
 });

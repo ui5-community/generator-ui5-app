@@ -1,1 +1,1 @@
-sap.ui.define(["./controller/App.qunit"]);
+sap.ui.define(["./controller/Main.qunit"]);

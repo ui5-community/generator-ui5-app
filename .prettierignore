@@ -5,3 +5,4 @@ test/*/
 generators/app/templates/webapp/Component.ts
 generators/app/templates/webapp/model/models.ts
 generators/app/templates/webapp/view/*.xml
+generators/app/templates/webapp/index*.html

@@ -147,6 +147,7 @@ export default class extends Generator {
 			// version parameters
 			this.config.set("gte1_98_0", semver.gte(props.frameworkVersion, "1.98.0"));
 			this.config.set("gte1_104_0", semver.gte(props.frameworkVersion, "1.104.0"));
+			this.config.set("gte1_120_0", semver.gte(props.frameworkVersion, "1.120.0"));
 			this.config.set("lt1_124_0", semver.lt(props.frameworkVersion, "1.124.0"));
 		});
 	}
