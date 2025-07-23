@@ -3,14 +3,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/UIComponent", "sap/ui/
 
 	return Controller.extend("<%= appId %>.controller.BaseController", {
 		/**
-		 * Convenience method for accessing the component of the controller's view.
-		 * @returns {sap.ui.core.Component} The component of the controller's view
-		 */
-		getOwnerComponent: function () {
-			return Controller.prototype.getOwnerComponent.call(this);
-		},
-
-		/**
 		 * Convenience method to get the components' router instance.
 		 * @returns {sap.m.routing.Router} The router instance
 		 */
