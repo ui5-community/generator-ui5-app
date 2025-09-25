@@ -2,6 +2,9 @@
 _
 test/*/
 
+# generated test apps likely start with com.myorg... they are not covered by the above pattern when they are created with their own git repo
+test/com*
+
 # Logs
 logs
 *.log
