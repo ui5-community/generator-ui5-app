@@ -13,3 +13,6 @@ yarn-error.log*
 node_modules/
 
 .DS_Store
+
+# generated test apps likely start with com.myorg...
+test/com*
