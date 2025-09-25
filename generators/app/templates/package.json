@@ -13,10 +13,10 @@
 		"start:dist": "npm start -- --config ui5-dist.yaml",
 		"start:dist-cdn": "npm run start-cdn -- --config ui5-dist.yaml",
 		"lint": "eslint webapp",
-		"karma": "karma start",
-		"karma-ci": "karma start karma-ci.conf.js",
-		"karma-ci-cov": "karma start karma-ci-cov.conf.js",
-		"test": "npm run lint && npm run karma-ci-cov"
+		"test-ui5": "start-server-and-test start http://localhost:8080 test-runner-coverage",
+		"test-runner": "ui5-test-runner --port 8081 --url http://localhost:8080/test/testsuite.qunit.html",
+		"test-runner-coverage": "ui5-test-runner --port 8081 --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 50 -ccf 50 -ccl 50 -ccs 50",
+		"test": "npm run lint && npm run test-ui5"
 	},
 	"devDependencies": {
 		"@ui5/cli": "^4.0.26",
@@ -24,11 +24,9 @@
 		"eslint": "^9.36.0",
 		"eslint-plugin-jsdoc": "^60.3.1",
 		"globals": "^16.4.0",
-		"karma": "^6.4.4",
-		"karma-chrome-launcher": "^3.2.0",
-		"karma-coverage": "^2.2.1",
-		"karma-ui5": "^4.1.0",
 		"rimraf": "^6.0.1",
-		"ui5-middleware-livereload": "^3.1.4"
+		"start-server-and-test": "^2.1.2",
+		"ui5-middleware-livereload": "^3.1.4",
+		"ui5-test-runner": "^5.9.1"
 	}
 }
