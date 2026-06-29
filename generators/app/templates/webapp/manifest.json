@@ -63,10 +63,13 @@
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
-				"type": "View",
+<% if (gte1_90_0) { %>				"type": "View",
 				"viewType": "XML",
 				"path": "<%= appId %>.view",
-				"controlId": "app",
+<% } else { %>				"viewType": "XML",
+				"viewPath": "<%= appId %>.view",
+				"async": true,
+<% } %>				"controlId": "app",
 				"controlAggregation": "pages"
 			},
 			"routes": [
@@ -78,9 +81,11 @@
 			],
 			"targets": {
 				"main": {
-					"id": "main",
+<% if (gte1_90_0) { %>					"id": "main",
 					"name": "Main"
-				}
+<% } else { %>					"viewId": "main",
+					"viewName": "Main"
+<% } %>				}
 			}
 		}
 	}

@@ -42,6 +42,7 @@
 		"yosay": "^2.0.2"
 	},
 	"devDependencies": {
+		"@eslint/js": "10.0.1",
 		"@prettier/plugin-xml": "^3.4.2",
 		"eslint": "^10.5.0",
 		"eslint-plugin-jsdoc": "^63.0.7",
