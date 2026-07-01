@@ -1,5 +1,5 @@
 {
-	"_version": "1.12.0",
+	"_version": "1.21.0",
 
 	"sap.app": {
 		"id": "<%= appId %>",
@@ -63,9 +63,13 @@
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
+<% if (gte1_90_0) { %>				"type": "View",
 				"viewType": "XML",
+				"path": "<%= appId %>.view",
+<% } else { %>				"viewType": "XML",
 				"viewPath": "<%= appId %>.view",
-				"controlId": "app",
+				"async": true,
+<% } %>				"controlId": "app",
 				"controlAggregation": "pages"
 			},
 			"routes": [
@@ -77,9 +81,11 @@
 			],
 			"targets": {
 				"main": {
-					"viewId": "main",
+<% if (gte1_90_0) { %>					"id": "main",
+					"name": "Main"
+<% } else { %>					"viewId": "main",
 					"viewName": "Main"
-				}
+<% } %>				}
 			}
 		}
 	}
