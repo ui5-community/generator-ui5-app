@@ -9,15 +9,15 @@ sap.ui.define(function () {
 				version: 2
 			},
 			sinon: {
-				version: 1
+				version: 4
 			},
 			ui5: {
 				language: "EN",
 				theme: "<%= defaultTheme %>"
 			},
 			coverage: {
-				only: "<%= appURI %>/",
-				never: "test-resources/<%= appURI %>/"
+				only: ["<%= appURI %>/"],
+				never: ["test-resources/<%= appURI %>/"]
 			},
 			loader: {
 				paths: {
