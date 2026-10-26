@@ -8,26 +8,26 @@
 		"clean": "rimraf dist coverage",
 		"build": "ui5 build --clean-dest",
 		"build:opt": "ui5 build self-contained --clean-dest --all",
-		"start": "ui5 serve --port 8080 -o index.html",
-		"start-cdn": "ui5 serve --port 8080 -o index-cdn.html",
+		"serve": "ui5 serve --port 8080",
+		"start": "npm run serve -- -o index.html",
+		"start-cdn": "npm run serve -- -o index-cdn.html",
 		"start:dist": "npm start -- --config ui5-dist.yaml",
 		"start:dist-cdn": "npm run start-cdn -- --config ui5-dist.yaml",
 		"lint": "eslint webapp",
-		"test-ui5": "start-server-and-test start http://localhost:8080 test-runner-coverage",
-		"test-runner": "ui5-test-runner --port 8081 --url http://localhost:8080/test/testsuite.qunit.html",
-		"test-runner-coverage": "ui5-test-runner --port 8081 --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 50 -ccf 50 -ccl 50 -ccs 50",
+		"test-runner": "ui5-test-runner --url http://localhost:8080/test/testsuite.qunit.html",
+		"test-runner-coverage": "ui5-test-runner --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 50 -ccf 50 -ccl 50 -ccs 50",
+		"test-ui5": "ui5-test-runner --start serve --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 50 -ccf 50 -ccl 50 -ccs 50",
 		"test": "npm run lint && npm run test-ui5"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@ui5/cli": "^4.0.57",
+		"@ui5/cli": "^4.0.71",
 		"@ui5/middleware-code-coverage": "^2.0.3",
-		"eslint": "^10.5.0",
-		"eslint-plugin-jsdoc": "^63.0.9",
-		"globals": "^17.7.0",
+		"eslint": "^10.13.0",
+		"eslint-plugin-jsdoc": "^65.4.2",
+		"globals": "^17.13.0",
 		"rimraf": "^6.1.3",
-		"start-server-and-test": "^3.0.11",
-		"ui5-middleware-livereload": "^3.3.1",
-		"ui5-test-runner": "^5.13.1"
+		"ui5-middleware-livereload": "^3.4.0",
+		"ui5-test-runner": "^5.14.2"
 	}
 }
